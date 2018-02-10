@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.apache.beam" % "beam-runners-direct-java" % beamVersion,
   "org.slf4j" % "slf4j-api" % slf4jVersion,
   "org.slf4j" % "slf4j-log4j12" % slf4jVersion,
-  "org.scalatest" % s"scalatest_${scalaMainVersion}" % scalaTestVersion % "test"
+  "org.scalatest" % "scalatest" % scalaTestVersion % "test"
 )
 
 assemblyMergeStrategy in assembly := {
