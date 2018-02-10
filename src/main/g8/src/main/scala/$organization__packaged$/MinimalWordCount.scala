@@ -1,3 +1,12 @@
+package $organization$
+
+import org.apache.beam.sdk.Pipeline
+import org.apache.beam.sdk.io.TextIO
+import org.apache.beam.sdk.options.PipelineOptionsFactory
+import org.apache.beam.sdk.transforms.DoFn.ProcessElement
+import org.apache.beam.sdk.transforms._
+import org.apache.beam.sdk.values.{KV, TypeDescriptors}
+
 object MinimalWordCount {
 
   def main(args: Array[String]): Unit = {
@@ -18,7 +27,7 @@ object MinimalWordCount {
   def extractWords = new DoFn[String, String] {
     @ProcessElement
     def processElement(c: ProcessContext): Unit = {
-      for (word <- c.element().split("[^\\p{L}]+")) yield {
+      for (word <- c.element().split("[^\p{L}]+")) yield {
         if (!word.isEmpty) c.output(word)
       }
     }
