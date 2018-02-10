@@ -27,7 +27,7 @@ object MinimalWordCount {
   def extractWords = new DoFn[String, String] {
     @ProcessElement
     def processElement(c: ProcessContext): Unit = {
-      for (word <- c.element().split("[^\p{L}]+")) yield {
+      for (word <- c.element().split("[^\\\p{L}]+")) yield {
         if (!word.isEmpty) c.output(word)
       }
     }
