@@ -334,7 +334,7 @@ public class AutoComplete {
   static class ExtractHashtags extends DoFn<String, String> {
     @ProcessElement
     public void processElement(ProcessContext c) {
-      Matcher m = Pattern.compile("#\\S+").matcher(c.element());
+      Matcher m = Pattern.compile("#\\\S+").matcher(c.element());
       while (m.find()) {
         c.output(m.group().substring(1));
       }

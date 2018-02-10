@@ -72,7 +72,7 @@ public class ExampleUtils {
    *
    * <p>It is used for tokenizing strings in the wordcount examples.
    */
-  public static final String TOKENIZER_PATTERN = "[^\\p{L}]+";
+  public static final String TOKENIZER_PATTERN = "[^\\\p{L}]+";
 
   private final PipelineOptions options;
   private Bigquery bigQueryClient = null;

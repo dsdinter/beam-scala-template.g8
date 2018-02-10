@@ -58,7 +58,7 @@ class FormatResult extends SimpleFunction[KV[String, java.lang.Long], String] {
 class ExtractWords extends DoFn[String, String] {
   @ProcessElement
   def processElement(c: ProcessContext): Unit = {
-    for (word <- c.element().split("[^\\p{L}]+")) yield {
+    for (word <- c.element().split("[^\\\p{L}]+")) yield {
       if (!word.isEmpty) c.output(word)
     }
   }
