@@ -161,7 +161,7 @@
       </properties>
 
       <dependencies>
-        <!--
+        /<!--
           This profile requires -P apex-runner and -P spark-runner already. When they are both
           included, the Spark runner's Kryo dependency will pull in a version that is insufficiently
           recent for the Apex runner.
@@ -203,8 +203,8 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempLocation=gs://temp-storage-for-end-to-end-tests",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempLocation=gs:///temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=org.apache.beam.runners.direct.DirectRunner"
                       ]
                     </beamTestPipelineOptions>
@@ -228,7 +228,7 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=org.apache.beam.runners.flink.TestFlinkRunner"
                       ]
                     </beamTestPipelineOptions>
@@ -249,7 +249,7 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=org.apache.beam.runners.spark.TestSparkRunner"
                       ]
                     </beamTestPipelineOptions>
@@ -273,7 +273,7 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=TestDataflowRunner"
                       ]
                     </beamTestPipelineOptions>
@@ -297,7 +297,7 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=TestDataflowRunner",
                       "--streaming=true"
                       ]
@@ -322,7 +322,7 @@
                     <beamTestPipelineOptions>
                       [
                       "--project=apache-beam-testing",
-                      "--tempRoot=gs://temp-storage-for-end-to-end-tests",
+                      "--tempRoot=gs:///temp-storage-for-end-to-end-tests",
                       "--runner=org.apache.beam.runners.apex.TestApexRunner"
                       ]
                     </beamTestPipelineOptions>
