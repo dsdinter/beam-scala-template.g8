@@ -6,9 +6,9 @@ sbt new dsdinter/beam-template.g8
 
 Requires sbt version >= `0.13.13`.
 
-[g8]: http://www.foundweekends.org/giter8/
-Template license
-----------------
+
+**Template license**
+
 Written in 2018 by David Sabater david.sabater@gmail.com
 [other author/contributor lines as appropriate]
 
