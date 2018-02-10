@@ -66,7 +66,7 @@ public class DistinctExample {
     String getOutput();
     void setOutput(String value);
 
-    // Returns gs://${TEMP_LOCATION}"deduped.txt".
+    /** Returns gs://TEMP_LOCATION/"deduped.txt". */
     class OutputFactory implements DefaultValueFactory<String> {
       @Override
       public String create(PipelineOptions options) {
