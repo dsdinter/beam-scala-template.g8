@@ -1,5 +1,12 @@
 A [Giter8][g8] template for Beam Scala Examples!
 
+```
+sbt new spotify/scio-template.g8
+```
+
+Requires sbt version >= `0.13.13`.
+
+[g8]: http://www.foundweekends.org/giter8/
 Template license
 ----------------
 Written in 2018 by David Sabater david.sabater@gmail.com
