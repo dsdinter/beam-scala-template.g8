@@ -4,12 +4,10 @@ lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "$organization$",
-      scalaVersion := "2.11.8",
-      name := "$name$",
       version := "1.0-SNAPSHOT",
       scalaVersion := "2.12.4"
     )),
-    name := "My Template Project"
+    name := "$name$"
   )
 
 lazy val scalaMainVersion = "2.12"
