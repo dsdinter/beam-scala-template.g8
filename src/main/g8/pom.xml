@@ -161,7 +161,7 @@
       </properties>
 
       <dependencies>
-        /<!--
+        \<!--
           This profile requires -P apex-runner and -P spark-runner already. When they are both
           included, the Spark runner's Kryo dependency will pull in a version that is insufficiently
           recent for the Apex runner.
