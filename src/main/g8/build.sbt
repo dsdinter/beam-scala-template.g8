@@ -1,10 +1,16 @@
-organization := "$organization$"
+import sbt.Keys.version
 
-name := "$name$"
-
-version := "1.0-SNAPSHOT"
-
-scalaVersion := "2.12.4"
+lazy val root = (project in file(".")).
+  settings(
+    inThisBuild(List(
+      organization := "$organization$",
+      scalaVersion := "2.11.8",
+      name := "$name$",
+      version := "1.0-SNAPSHOT",
+      scalaVersion := "2.12.4"
+    )),
+    name := "My Template Project"
+  )
 
 lazy val scalaMainVersion = "2.12"
 lazy val beamVersion = "2.2.0"
@@ -16,7 +22,8 @@ libraryDependencies ++= Seq(
   "org.apache.beam" % "beam-runners-direct-java" % beamVersion,
   "org.slf4j" % "slf4j-api" % slf4jVersion,
   "org.slf4j" % "slf4j-log4j12" % slf4jVersion,
-  "org.scalatest" % "scalatest" % scalaTestVersion % "test"
+  "org.scalactic" %% "scalactic" % scalaTestVersion,
+  "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 )
 
 assemblyMergeStrategy in assembly := {
