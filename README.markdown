@@ -1,7 +1,7 @@
 A [Giter8][g8] template for Beam Scala Examples!
 
 ```
-sbt new spotify/scio-template.g8
+sbt new dsdinter/beam-template.g8
 ```
 
 Requires sbt version >= `0.13.13`.
