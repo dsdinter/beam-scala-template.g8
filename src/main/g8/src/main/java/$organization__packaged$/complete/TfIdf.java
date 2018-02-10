@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.beam.examples.complete;
+package $organization$.complete;
 
 import com.google.common.base.Optional;
 import java.io.File;

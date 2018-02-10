@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.beam.examples.complete;
+package $organization$.complete;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.datastore.v1.client.DatastoreHelper.makeKey;
@@ -36,9 +36,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.apache.beam.examples.common.ExampleBigQueryTableOptions;
-import org.apache.beam.examples.common.ExampleOptions;
-import org.apache.beam.examples.common.ExampleUtils;
+import $organization$.common.ExampleBigQueryTableOptions;
+import $organization$.common.ExampleOptions;
+import $organization$.common.ExampleUtils;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult;
 import org.apache.beam.sdk.coders.AvroCoder;
