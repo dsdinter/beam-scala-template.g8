@@ -22,9 +22,9 @@ import com.google.api.services.bigquery.model.TableRow;
 import com.google.api.services.bigquery.model.TableSchema;
 import java.io.IOException;
 import java.util.ArrayList;
-import $organization$.common.ExampleBigQueryTableOptions;
-import $organization$.common.ExampleOptions;
-import $organization$.common.ExampleUtils;
+import $organization$.common.$name;format="Camel"$BigQueryTableOptions;
+import $organization$.common.$name;format="Camel"$Options;
+import $organization$.common.$name;format="Camel"$Utils;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult;
 import org.apache.beam.sdk.io.TextIO;
@@ -57,7 +57,7 @@ public class StreamingWordExtract {
   static class ExtractWords extends DoFn<String, String> {
     @ProcessElement
     public void processElement(ProcessContext c) {
-      String[] words = c.element().split(ExampleUtils.TOKENIZER_PATTERN);
+      String[] words = c.element().split($name;format="Camel"$Utils.TOKENIZER_PATTERN);
       for (String word : words) {
         if (!word.isEmpty()) {
           c.output(word);
@@ -102,7 +102,7 @@ public class StreamingWordExtract {
    * <p>Inherits standard configuration options.
    */
   private interface StreamingWordExtractOptions
-      extends ExampleOptions, ExampleBigQueryTableOptions, StreamingOptions {
+      extends $name;format="Camel"$Options, $name;format="Camel"$BigQueryTableOptions, StreamingOptions {
     @Description("Path of the file to read from")
     @Default.String("gs://apache-beam-samples/shakespeare/kinglear.txt")
     String getInputFile();
@@ -121,8 +121,8 @@ public class StreamingWordExtract {
     options.setStreaming(true);
 
     options.setBigQuerySchema(StringToRowConverter.getSchema());
-    ExampleUtils exampleUtils = new ExampleUtils(options);
-    exampleUtils.setup();
+    $name;format="Camel"$Utils $name;format="camel"$Utils = new $name;format="Camel"$Utils(options);
+    $name;format="camel"$Utils.setup();
 
     Pipeline pipeline = Pipeline.create(options);
 
@@ -141,7 +141,7 @@ public class StreamingWordExtract {
 
     PipelineResult result = pipeline.run();
 
-    // ExampleUtils will try to cancel the pipeline before the program exists.
-    exampleUtils.waitToFinish(result);
+    // $name;format="Camel"$Utils will try to cancel the pipeline before the program exists.
+    $name;format="camel"$Utils.waitToFinish(result);
   }
 }
