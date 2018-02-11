@@ -25,9 +25,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-import $organization$.common.ExampleBigQueryTableOptions;
-import $organization$.common.ExampleOptions;
-import $organization$.common.ExampleUtils;
+import $organization$.common.$name;format="Camel"$BigQueryTableOptions;
+import $organization$.common.$name;format="Camel"$Options;
+import $organization$.common.$name;format="Camel"$Utils;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult;
 import org.apache.beam.sdk.io.TextIO;
@@ -438,8 +438,8 @@ public class TriggerExample {
 
     options.setBigQuerySchema(getSchema());
 
-    ExampleUtils exampleUtils = new ExampleUtils(options);
-    exampleUtils.setup();
+    $name;format="Camel"$Utils $name;format="camel"$Utils = new $name;format="Camel"$Utils(options);
+    $name;format="camel"$Utils.setup();
 
     Pipeline pipeline = Pipeline.create(options);
 

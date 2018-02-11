@@ -25,9 +25,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.avro.reflect.Nullable;
-import $organization$.common.ExampleBigQueryTableOptions;
-import $organization$.common.ExampleOptions;
-import $organization$.common.ExampleUtils;
+import $organization$.common.$name;format="Camel"$BigQueryTableOptions;
+import $organization$.common.$name;format="Camel"$Options;
+import $organization$.common.$name;format="Camel"$Utils;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult;
 import org.apache.beam.sdk.coders.AvroCoder;
@@ -301,7 +301,7 @@ public class TrafficMaxLaneFlow {
     *
     * <p>Inherits standard configuration options.
     */
-  public interface TrafficMaxLaneFlowOptions extends ExampleOptions, ExampleBigQueryTableOptions {
+  public interface TrafficMaxLaneFlowOptions extends $name;format="Camel"$Options, $name;format="Camel"$BigQueryTableOptions {
     @Description("Path of the file to read from")
     @Default.String("gs://apache-beam-samples/traffic_sensor/"
         + "Freeways-5Minaa2010-01-01_to_2010-02-15_test2.csv")
@@ -329,9 +329,9 @@ public class TrafficMaxLaneFlow {
         .withValidation()
         .as(TrafficMaxLaneFlowOptions.class);
     options.setBigQuerySchema(FormatMaxesFn.getSchema());
-    // Using ExampleUtils to set up required resources.
-    ExampleUtils exampleUtils = new ExampleUtils(options);
-    exampleUtils.setup();
+    // Using $name;format="Camel"$Utils to set up required resources.
+    $name;format="Camel"$Utils $name;format="camel"$Utils = new $name;format="Camel"$Utils(options);
+    $name;format="camel"$Utils.setup();
 
     Pipeline pipeline = Pipeline.create(options);
     TableReference tableRef = new TableReference();
@@ -354,8 +354,8 @@ public class TrafficMaxLaneFlow {
     // Run the pipeline.
     PipelineResult result = pipeline.run();
 
-    // ExampleUtils will try to cancel the pipeline and the injector before the program exists.
-    exampleUtils.waitToFinish(result);
+    // $name;format="Camel"$Utils will try to cancel the pipeline and the injector before the program exists.
+    $name;format="camel"$Utils.waitToFinish(result);
   }
 
   private static Integer tryIntParse(String number) {

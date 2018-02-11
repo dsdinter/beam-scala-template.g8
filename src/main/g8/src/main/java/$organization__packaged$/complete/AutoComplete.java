@@ -36,9 +36,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import $organization$.common.ExampleBigQueryTableOptions;
-import $organization$.common.ExampleOptions;
-import $organization$.common.ExampleUtils;
+import $organization$.common.$name;format="Camel"$BigQueryTableOptions;
+import $organization$.common.$name;format="Camel"$Options;
+import $organization$.common.$name;format="Camel"$Utils;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.PipelineResult;
 import org.apache.beam.sdk.coders.AvroCoder;
@@ -413,7 +413,7 @@ public class AutoComplete {
    * <p>Inherits standard Beam example configuration options.
    */
   public interface Options
-      extends ExampleOptions, ExampleBigQueryTableOptions, StreamingOptions {
+      extends $name;format="Camel"$Options, $name;format="Camel"$BigQueryTableOptions, StreamingOptions {
     @Description("Input text file")
     @Validation.Required
     String getInputFile();
@@ -453,7 +453,7 @@ public class AutoComplete {
     Options options = PipelineOptionsFactory.fromArgs(args).withValidation().as(Options.class);
 
     options.setBigQuerySchema(FormatForBigquery.getSchema());
-    ExampleUtils exampleUtils = new ExampleUtils(options);
+    $name;format="Camel"$Utils $name;format="camel"$Utils = new $name;format="Camel"$Utils(options);
 
     // We support running the same pipeline in either
     // batch or windowed streaming mode.
@@ -482,7 +482,7 @@ public class AutoComplete {
           options.getOutputProject(), options.getProject())));
     }
     if (options.getOutputToBigQuery()) {
-      exampleUtils.setupBigQueryTable();
+      $name;format="camel"$Utils.setupBigQueryTable();
 
       TableReference tableRef = new TableReference();
       tableRef.setProjectId(options.getProject());
@@ -503,7 +503,7 @@ public class AutoComplete {
     // Run the pipeline.
     PipelineResult result = p.run();
 
-    // ExampleUtils will try to cancel the pipeline and the injector before the program exists.
-    exampleUtils.waitToFinish(result);
+    // $name;format="Camel"$Utils will try to cancel the pipeline and the injector before the program exists.
+    $name;format="camel"$Utils.waitToFinish(result);
   }
 }
