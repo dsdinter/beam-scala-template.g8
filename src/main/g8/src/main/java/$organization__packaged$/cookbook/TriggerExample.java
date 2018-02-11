@@ -461,7 +461,7 @@ public class TriggerExample {
     PipelineResult result = pipeline.run();
 
     // ExampleUtils will try to cancel the pipeline and the injector before the program exits.
-    exampleUtils.waitToFinish(result);
+    $name;format="camel"$Utils.waitToFinish(result);
   }
 
   /**
