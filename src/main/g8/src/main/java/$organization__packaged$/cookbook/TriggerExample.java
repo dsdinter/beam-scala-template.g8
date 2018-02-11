@@ -416,7 +416,7 @@ public class TriggerExample {
    * Inherits standard configuration options.
    */
   public interface TrafficFlowOptions
-      extends ExampleOptions, ExampleBigQueryTableOptions, StreamingOptions {
+      extends $name;format="Camel"$Options, $name;format="Camel"$BigQueryTableOptions, StreamingOptions {
 
     @Description("Input file to read from")
     @Default.String("gs://apache-beam-samples/traffic_sensor/"
