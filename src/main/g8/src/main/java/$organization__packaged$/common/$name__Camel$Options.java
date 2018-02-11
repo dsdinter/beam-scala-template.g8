@@ -24,7 +24,7 @@ import org.apache.beam.sdk.options.PipelineOptions;
 /**
  * Options that can be used to configure the Beam examples.
  */
-public interface ExampleOptions extends PipelineOptions {
+public interface $name;format="Camel"$Options extends PipelineOptions {
   @Description("Whether to keep jobs running after local process exit")
   @Default.Boolean(false)
   boolean getKeepJobsRunning();

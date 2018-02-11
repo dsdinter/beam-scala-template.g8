@@ -28,7 +28,7 @@ import org.apache.beam.sdk.options.PipelineOptions;
  * Options that can be used to configure BigQuery tables in Beam examples.
  * The project defaults to the project being used to run the example.
  */
-public interface ExampleBigQueryTableOptions extends GcpOptions {
+public interface $name;format="Camel"$BigQueryTableOptions extends GcpOptions {
   @Description("BigQuery dataset name")
   @Default.String("beam_examples")
   String getBigQueryDataset();

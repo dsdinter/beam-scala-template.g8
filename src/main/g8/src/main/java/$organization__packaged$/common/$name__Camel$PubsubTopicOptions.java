@@ -26,7 +26,7 @@ import org.apache.beam.sdk.options.PipelineOptions;
 /**
  * Options that can be used to configure Pub/Sub topic in Beam examples.
  */
-public interface ExamplePubsubTopicOptions extends GcpOptions {
+public interface $name;format="Camel"$PubsubTopicOptions extends GcpOptions {
   @Description("Pub/Sub topic")
   @Default.InstanceFactory(PubsubTopicFactory.class)
   String getPubsubTopic();

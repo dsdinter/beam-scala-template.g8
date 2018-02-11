@@ -62,7 +62,7 @@ import org.joda.time.Duration;
  *
  * <p>It is used to run Beam examples.
  */
-public class ExampleUtils {
+public class $name;format="Camel"$Utils {
 
   private static final int SC_NOT_FOUND = 404;
 
@@ -83,7 +83,7 @@ public class ExampleUtils {
   /**
    * Do resources and runner options setup.
    */
-  public ExampleUtils(PipelineOptions options) {
+  public $name;format="Camel"$Utils(PipelineOptions options) {
     this.options = options;
   }
 
@@ -124,8 +124,8 @@ public class ExampleUtils {
    * @throws IOException if there is a problem setting up the Pub/Sub topic
    */
   public void setupPubsub() throws IOException {
-    ExamplePubsubTopicAndSubscriptionOptions pubsubOptions =
-        options.as(ExamplePubsubTopicAndSubscriptionOptions.class);
+    $name;format="Camel"$PubsubTopicAndSubscriptionOptions pubsubOptions =
+        options.as($name;format="Camel"$PubsubTopicAndSubscriptionOptions.class);
     if (!pubsubOptions.getPubsubTopic().isEmpty()) {
       pendingMessages.add("**********************Set Up Pubsub************************");
       setupPubsubTopic(pubsubOptions.getPubsubTopic());
@@ -151,8 +151,8 @@ public class ExampleUtils {
    * @throws IOException if there is a problem setting up the BigQuery table
    */
   public void setupBigQueryTable() throws IOException {
-    ExampleBigQueryTableOptions bigQueryTableOptions =
-        options.as(ExampleBigQueryTableOptions.class);
+    $name;format="Camel"$BigQueryTableOptions bigQueryTableOptions =
+        options.as($name;format="Camel"$BigQueryTableOptions.class);
     if (bigQueryTableOptions.getBigQueryDataset() != null
         && bigQueryTableOptions.getBigQueryTable() != null
         && bigQueryTableOptions.getBigQuerySchema() != null) {
@@ -173,8 +173,8 @@ public class ExampleUtils {
    */
   private void tearDown() {
     pendingMessages.add("*************************Tear Down*************************");
-    ExamplePubsubTopicAndSubscriptionOptions pubsubOptions =
-        options.as(ExamplePubsubTopicAndSubscriptionOptions.class);
+    $name;format="Camel"$PubsubTopicAndSubscriptionOptions pubsubOptions =
+        options.as($name;format="Camel"$PubsubTopicAndSubscriptionOptions.class);
     if (!pubsubOptions.getPubsubTopic().isEmpty()) {
       try {
         deletePubsubTopic(pubsubOptions.getPubsubTopic());
@@ -196,8 +196,8 @@ public class ExampleUtils {
       }
     }
 
-    ExampleBigQueryTableOptions bigQueryTableOptions =
-        options.as(ExampleBigQueryTableOptions.class);
+    $name;format="Camel"$BigQueryTableOptions bigQueryTableOptions =
+        options.as($name;format="Camel"$BigQueryTableOptions.class);
     if (bigQueryTableOptions.getBigQueryDataset() != null
         && bigQueryTableOptions.getBigQueryTable() != null
         && bigQueryTableOptions.getBigQuerySchema() != null) {
@@ -330,7 +330,7 @@ public class ExampleUtils {
    */
   public void waitToFinish(PipelineResult result) {
     pipelinesToCancel.add(result);
-    if (!options.as(ExampleOptions.class).getKeepJobsRunning()) {
+    if (!options.as($name;format="Camel"$Options.class).getKeepJobsRunning()) {
       addShutdownHook(pipelinesToCancel);
     }
     try {
